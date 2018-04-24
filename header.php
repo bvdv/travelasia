@@ -33,14 +33,18 @@
 					</div>
 					<div class="main-menubar d-flex align-items-center">
 						<nav class="hide">
-							<a href="#home">Home</a>
-							<a href="#booking">Booking</a>
-							<a href="#package">Packages</a>
-							<a href="#blog">Blog</a>
-							<a href="#contact">Contact</a>
+							<?php
+							$menuParameters = array(
+								'container'       => false,
+								'echo'            => false,
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+							);
+                            echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+							?>
 						</nav>
-					    <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-			        </div>
+						<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+					</div>
 				</div>
 			</div>
 		</div>
