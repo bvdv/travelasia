@@ -1,3 +1,8 @@
+<?php
+if (is_page( $page = 'Feature' )) {
+	get_header();
+}
+?>
 <section class="feature-area section-gap">
 	<div class="container">
 		<div class="row">
@@ -33,7 +38,16 @@
 				</p>
 				<a href="#" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
 			</div>
-
-		</div>
+        </div>
 	</div>
 </section>
+
+<?php
+category_feature_posts();      
+if (is_page( $page = 'Feature' )) {
+	get_footer();
+}
+
+?>
+
+

@@ -11,7 +11,8 @@
 					<div class="row">
 						<div class="col-lg-2 col-sm-6 single-packages no-padding"">
 						  <div class="content">
-						    <a href="#" target="_blank">
+						    <!-- <a href="#" target="_blank"> -->
+						    <a href="<?php the_permalink(); ?>">	
 						      <div class="content-overlay"></div>
 						  		 <img class="content-image img-fluid d-block mx-auto" src="img/p1.jpg" alt="">
 						      <div class="content-details fadeIn-bottom">

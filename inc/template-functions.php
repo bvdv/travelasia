@@ -35,3 +35,4 @@ function travelasia_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'travelasia_pingback_header' );
+

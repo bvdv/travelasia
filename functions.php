@@ -197,3 +197,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ *  Display all Feature category posts
+ */
+function category_feature_posts() {
+    global $post;
+	$args = array('category_name' => 'Features', 'suppress_filters' => true );
+	$lastposts = get_posts( $args ); ?>
+	
+		  
+			<?php
+			foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+			<div class="sigle-feature col-lg-3 col-md-6">
+		    <span class="lnr lnr-rocket"></span>
+                
+				    <h4><?php the_title(); ?></h4>
+				    <?php the_excerpt(); ?></div>
+				    <a href="#" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
+			    
+            <?php endforeach; ?>
+	    	
+    <!-- </div> -->
+<?php
+    wp_reset_postdata();
+}
+
