@@ -14,7 +14,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
@@ -29,13 +29,14 @@
 			<div class="header-wrap">
 				<div class="header-top d-flex justify-content-between align-items-center">
 					<div class="logo">
-						<a href="#home"><?php the_custom_logo(); ?></a>
+						<a href="#home"><?php the_custom_logo();?></a>
 					</div>
 					<div class="main-menubar d-flex align-items-center">
 						<nav class="hide">
 							<a href="#home">Home</a>
 							<a href="#booking">Booking</a>
 							<a href="#package">Packages</a>
+							<a href="#blog">Blog</a>
 							<a href="#contact">Contact</a>
 						</nav>
 					    <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
