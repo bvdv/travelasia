@@ -128,6 +128,8 @@ function travelasia_scripts() {
 
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '2017' );
 
+	wp_enqueue_style( 'owl-carousel-theme', get_template_directory_uri() . '/css/owl.theme.default.css', array(), '2017' );
+
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '2017' );
 
 	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', array(), '2017' );
@@ -145,7 +147,9 @@ function travelasia_scripts() {
 
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), '20151215', true );
 
-    wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
+    //wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
+    wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.js', array(), '20151215', true );
+    
 
     wp_enqueue_script( 'ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js', array(), '20151215', true );
 
@@ -158,7 +162,7 @@ function travelasia_scripts() {
     wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array(), '20151215', true );
 
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
-
+     
 
     wp_enqueue_script( 'travelasia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -210,20 +214,37 @@ function category_feature_posts() {
     global $post;
 	$args = array('category_name' => 'Features', 'suppress_filters' => true );
 	$lastposts = get_posts( $args ); ?>
-	
-		  
-			<?php
-			foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-			<div class="sigle-feature col-lg-3 col-md-6">
-		    <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
-                    <h4><?php the_title(); ?></h4>
-				    <?php the_excerpt(); ?>
-				    <a href="<?php the_permalink(); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
-			        </div>
-            <?php endforeach; ?>
+	    <?php
+		    foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+		        <div class="sigle-feature col-lg-3 col-md-6">
+	                <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
+                        <h4><?php the_title(); ?></h4>
+			            <?php the_excerpt(); ?>
+			        <a href="<?php the_permalink(); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
+		        </div>
+        <?php endforeach; ?>
 	    	
     <!-- </div> -->
 <?php
     wp_reset_postdata();
 }
+
+function create_post_type() {
+  register_post_type( 'acme_product',
+    array(
+      'labels' => array(
+        'name' => __( 'Products' ),
+        'singular_name' => __( 'Product' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+
+  
+
+
+
+}
+add_action( 'init', 'create_post_type' );
 
