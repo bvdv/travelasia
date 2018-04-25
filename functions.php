@@ -197,6 +197,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function admoneo_travel_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'admoneo_travel_excerpt_length', 999 );
+
+
 /**
  *  Display all Feature category posts
  */
@@ -209,12 +215,11 @@ function category_feature_posts() {
 			<?php
 			foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
 			<div class="sigle-feature col-lg-3 col-md-6">
-		    <span class="lnr lnr-rocket"></span>
-                
-				    <h4><?php the_title(); ?></h4>
-				    <?php the_excerpt(); ?></div>
-				    <a href="#" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
-			    
+		    <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
+                    <h4><?php the_title(); ?></h4>
+				    <?php the_excerpt(); ?>
+				    <a href="<?php the_permalink(); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
+			        </div>
             <?php endforeach; ?>
 	    	
     <!-- </div> -->
