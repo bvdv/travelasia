@@ -210,7 +210,7 @@ add_filter( 'excerpt_length', 'admoneo_travel_excerpt_length', 999 );
  */
 function category_feature_posts() {
     global $post;
-	$args = array('category_name' => 'Features', 'suppress_filters' => true );
+	$args = array('post_type' => 'Features', 'suppress_filters' => true );
 	$lastposts = get_posts( $args ); ?>
 	    <?php
 		    foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
@@ -228,20 +228,30 @@ function category_feature_posts() {
 }
 
 function create_post_type() {
-  register_post_type( 'acme_product',
-    array(
-      'labels' => array(
-        'name' => __( 'Products' ),
-        'singular_name' => __( 'Product' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
-  );
-
-  
 
 
+	register_post_type( 'acme_product',
+		array(
+			'labels' => array(
+				'name' => __( 'Products' ),
+				'singular_name' => __( 'Product' )
+			),
+			'public' => true,
+			'has_archive' => true,
+		)
+	);
+
+	register_post_type( 'features',
+		array(
+			'labels' => array(
+				'name' => __( 'Features' ),
+				'singular_name' => __( 'Feature' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
 
 }
 add_action( 'init', 'create_post_type' );
