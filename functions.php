@@ -214,7 +214,7 @@ function category_feature_posts() {
 	$lastposts = get_posts( $args ); ?>
 	    <?php
 		    foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-		        <div class="sigle-feature col-lg-3 col-md-6">
+		        <div class="sigle-feature col-lg-3 col-md-6 feature-owl">
 	                <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
                         <h4><?php the_title(); ?></h4>
 			            <?php the_excerpt(); ?>

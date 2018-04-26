@@ -186,14 +186,14 @@
 
 
       
-$('.fetur').owlCarousel({
-    dots: false,
-    items: 4,
-    loop:true,
-    margin:0,
-    nav:true,
+                $('.fetur').owlCarousel({
+                    dots: false,
+                    items: 4,
+                    loop:true,
+                    margin:0,
+                    nav:true,
 
-})
+                })
 
 
     });
