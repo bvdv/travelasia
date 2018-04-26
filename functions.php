@@ -138,7 +138,7 @@ function travelasia_scripts() {
 
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), '2017' );
 
-	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/main.css', array(), '2017' );
+    wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/main.css', array(), '2017' );
 
 
     wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/vendor/jquery-2.2.4.min.js', array(), '20151215', true );
@@ -147,9 +147,7 @@ function travelasia_scripts() {
 
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), '20151215', true );
 
-    //wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
     wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.js', array(), '20151215', true );
-    
 
     wp_enqueue_script( 'ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js', array(), '20151215', true );
 
