@@ -26,7 +26,7 @@ get_header();
 		<section class="feature-area section-gap">
 		    <div class="container">
 		        <div class="row">
-		        	<div class="fetur owl-carousel owl-theme">
+		        	<div class="features-carousel owl-carousel owl-theme">
 		            <?php category_feature_posts(); ?>
 		            </div>
 		        </div>

@@ -179,26 +179,37 @@
               //   }
 
 
-                $(document).ready(function() {
-                  $('#mc_embed_signup').find('form').ajaxChimp();
-                });      
+              $(document).ready(function() {
+                $('#mc_embed_signup').find('form').ajaxChimp();
+              });      
       // -------   Mail Send ajax
 
 
       
-                $('.fetur').owlCarousel({
-                    dots: false,
-                    items: 4,
-                    loop:true,
-                    margin:0,
-                    nav:true,
+      $('.features-carousel').owlCarousel({
+        dots: false,
+        items: 4,
+        loop:true,
+        margin:0,
+        nav:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:3
+          },
+          1000:{
+            items:4
+          }
+        }
 
-                })
+      })
 
 
     });
 
 
-    
+
 
 })( jQuery );
