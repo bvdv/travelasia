@@ -12,16 +12,15 @@ get_header();?>
 	<div class="container">
 		<br>
 		<h2>Features</h2>
-		<br>
 		<?php
 		global $post;
 		$args = array('post_type' => 'Features', 'suppress_filters' => true );
 		$lastposts = get_posts( $args );
 		foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+		    <hr>
 		    <h3><?php echo get_post_meta( get_the_ID(), 'icon', true); ?></h3>
 			<h4><?php the_title(); ?></h4>
 			<?php the_content(); ?>
-			<hr>
 		<?php endforeach; 
 		wp_reset_postdata(); ?>
 	</div>

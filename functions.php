@@ -44,7 +44,8 @@ if ( ! function_exists( 'travelasia_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'travelasia' ),
+			'fp-menu' => 'Front-page menu',
+			'posts-menu' => 'Posts-menu'
 		) );
 
 		/*
@@ -219,10 +220,7 @@ function category_feature_posts() {
 			            <?php the_excerpt(); ?>
 			        <a href="<?php echo get_post_type_archive_link('features'); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
 		        </div>
-        <?php endforeach; ?>
-	    	
-    <!-- </div> -->
-<?php
+        <?php endforeach; 
     wp_reset_postdata();
 }
 
