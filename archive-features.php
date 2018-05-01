@@ -8,23 +8,23 @@
  */
 
 get_header();?>
-<section class="feature-area section-gap">
+<section class="feature-area">
 	<div class="container">
-		<div class="row">
-			<?php
-				global $post;
-				$args = array('post_type' => 'Features', 'suppress_filters' => true );
-				    $lastposts = get_posts( $args );
-				        foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-				            <div class="sigle-feature col-lg-3 col-md-6 feature-owl">
-					        <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
-					        <h4><?php the_title(); ?></h4>
-					        <?php the_content(); ?>
-				            </div>
-			            <?php endforeach; 
-			wp_reset_postdata(); ?>
-		</div>
-</div>
+		<br>
+		<h2>Features</h2>
+		<br>
+		<?php
+		global $post;
+		$args = array('post_type' => 'Features', 'suppress_filters' => true );
+		$lastposts = get_posts( $args );
+		foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+		    <h3><?php echo get_post_meta( get_the_ID(), 'icon', true); ?></h3>
+			<h4><?php the_title(); ?></h4>
+			<?php the_content(); ?>
+			<hr>
+		<?php endforeach; 
+		wp_reset_postdata(); ?>
+	</div>
 </section>
 
 <?php
