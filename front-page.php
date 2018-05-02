@@ -63,9 +63,10 @@ get_header();
 	    				    <div class="content">
 	    					    <a href="<?php echo get_post_type_archive_link('packages'); ?>"> 
 	    						    <div class="content-overlay"></div>
-	    						    <img class="content-image img-fluid d-block mx-auto" src="<?php echo get_template_directory_uri(); ?>/img/p6.jpg" alt="">
-	    						     <div class="content-details fadeIn-bottom">
-	    							<h3 class="content-title"><?php the_title(); ?></h3>
+	                                <?php travelasia_post_thumbnail( 'medium', array(
+	                                	'class' => 'content-image img-fluid d-block mx-auto' )); ?>
+                                    <div class="content-details fadeIn-bottom">
+	    							    <h3 class="content-title"><?php the_title(); ?></h3>
 	    						    </div>
 	    					    </a>
 	    				    </div>

@@ -18,7 +18,7 @@ get_header();?>
 		$lastposts = get_posts( $args );
 		foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
 		    <hr>
-		    <h3><?php echo get_post_meta( get_the_ID(), 'icon', true); ?></h3>
+		    <?php travelasia_post_thumbnail(); ?>
 			<h4><?php the_title(); ?></h4>
 			<?php the_content(); ?>
 		<?php endforeach; 
