@@ -251,6 +251,18 @@ function create_post_type() {
 		)
 	);
 
+	register_post_type( 'banner',
+		array(
+			'labels' => array(
+				'name' => __( 'Banners' ),
+				'singular_name' => __( 'Banner' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks', 'author',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
+
 }
 add_action( 'init', 'create_post_type' );
 

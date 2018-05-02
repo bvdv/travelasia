@@ -20,9 +20,9 @@ function travelasia_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'travelasia_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'width'                  => 1920,
+		'height'                 => 820,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'travelasia_header_style',
 	) ) );
 }

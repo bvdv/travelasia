@@ -19,8 +19,8 @@ get_header();
 	<main id="main" class="site-main">
 
 		<!-- start banner Area -->
-		<section class="banner-area relative" id="home">
-			<div class="overlay overlay-bg"></div>
+		<section class="banner-area relative" id="home" style="background:url(<?php echo get_header_image();?>)">
+            <div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
 					<div class="banner-content col-lg-9 col-md-12">
@@ -28,19 +28,22 @@ get_header();
 							Wherever you go  <br>
 							it’ll inside the World
 						</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
-						<a href="#" class="primary-btn">See Details<span class="lnr lnr-arrow-right"></span></a>
+						<p>“The world is a book and those who do not travel read only one page.” – St. Augustine</p>
+						<a href="<?php echo get_post_type_archive_link('blog'); ?>" class="primary-btn">See Details<span class="lnr lnr-arrow-right"></span></a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End banner Area -->
-
+        
+        <!-- Start booking Area -->
         <?php
 		
 		get_template_part( 'page', 'booking' );
 		
 		?>
+		<!-- End booking Area -->
+
 		<!-- Start feature Area -->
 		<section class="feature-area section-gap">
 			<div class="container">
@@ -68,7 +71,7 @@ get_header();
         <!-- End feature Area --> 
 
         <!-- Start packages Area --> 
-	    <section class="packages-area" id="package">
+	    <section class="packages-area" id="package" style="padding-bottom: 0px">
 	    	<div class="container-fluid">
 	    		<div class="row d-flex justify-content-center">
 	    			<div class="col-md-6 pb-80 header-text">
@@ -102,7 +105,6 @@ get_header();
 	    	        </div>
 	    	    </div>
 	        </div>
-	        <div class="container-fluid" style="background-color:Black"><br><br><br><br></div>
 	    </section>
         <!-- End packages Area -->
 
@@ -111,6 +113,7 @@ get_header();
         	<div class="container">
         		<div class="row justify-content-center">
         			<div class="col-md-8 pb-30 header-text">
+        				<br><br>
         				<h1>Our Recent Blogs</h1>
         			</div>
         		</div>
