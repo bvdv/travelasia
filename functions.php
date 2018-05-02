@@ -210,18 +210,7 @@ add_filter( 'excerpt_length', 'admoneo_travel_excerpt_length', 999 );
  *  Display all Feature category posts
  */
 function category_feature_posts() {
-    global $post;
-	$args = array('post_type' => 'Features', 'suppress_filters' => true );
-	$lastposts = get_posts( $args ); 
-		    foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-		        <div class="sigle-feature col-lg-3 col-md-6 feature-owl">
-	                <?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
-                        <h4><?php the_title(); ?></h4>
-			            <?php the_excerpt(); ?>
-			        <a href="<?php echo get_post_type_archive_link('features'); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
-		        </div>
-        <?php endforeach; 
-    wp_reset_postdata();
+
 }
 
 function create_post_type() {

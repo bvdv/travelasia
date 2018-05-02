@@ -33,32 +33,32 @@
 					</div>
 					<div class="main-menubar d-flex align-items-center">
 						<? if (is_front_page()) : ?>
-						<nav class="hide">
-							<?php
-							$menuParameters = array(
-								'menu'            => 'fp-menu',
-								'container'       => false,
-								'echo'            => false,
-								'items_wrap'      => '%3$s',
-								'depth'           => 0,
-							);
-                            echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-							?>
-						</nav>
-					    <?php else : ?>
-					    <nav class="hide">
-							<?php
-							$menuParameters = array(
-								'menu'            => 'posts-menu',
-								'container'       => false,
-								'echo'            => false,
-								'items_wrap'      => '%3$s',
-								'depth'           => 0,
-							);
-                            echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-							?>
-						</nav>
-					<?php endif ;?>
+							<nav class="hide">
+								<?php
+								$menuParameters = array(
+									'menu'            => 'fp-menu',
+									'container'       => false,
+									'echo'            => false,
+									'items_wrap'      => '%3$s',
+									'depth'           => 0,
+								);
+								echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+								?>
+							</nav>
+						<?php else : ?>
+							<nav class="hide">
+								<?php
+								$menuParameters = array(
+									'menu'            => 'posts-menu',
+									'container'       => false,
+									'echo'            => false,
+									'items_wrap'      => '%3$s',
+									'depth'           => 0,
+								);
+								echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+								?>
+							</nav>
+						<?php endif ;?>
 						<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 					</div>
 				</div>
