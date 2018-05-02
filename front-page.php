@@ -31,7 +31,7 @@ get_header();
 						$args = array('post_type' => 'Features', 'suppress_filters' => true );
 						$lastposts = get_posts( $args ); 
 						foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-						<div class="sigle-feature col-lg-3 col-md-6 feature-owl">
+						<div class="sigle-feature col-lg-3 col-md-6 customized-owl">
 							<?php echo get_post_meta( get_the_ID(), 'icon', true); ?>
 							<h4><?php the_title(); ?></h4>
 							<?php the_excerpt(); ?>
@@ -54,33 +54,35 @@ get_header();
 	    			</div>
 	    		</div>
 	    		<div class="row">
+	    			<div class="packages-carousel owl-carousel owl-theme">
 	    			<?php 
 	    			global $post;
 	    			$args = array( 'numberposts' => 6 ,'post_type' => 'Packages', 'suppress_filters' => true );
 	    			$lastposts = get_posts( $args ); 
 	    			foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
-	    			    <div class="col-lg-2 col-sm-6 single-packages no-padding">
+	    			    <div class="col-lg-2 col-sm-6 single-packages no-padding customized-owl">
 	    				    <div class="content">
 	    					    <a href="<?php echo get_post_type_archive_link('packages'); ?>"> 
 	    						    <div class="content-overlay"></div>
 	                                <?php travelasia_post_thumbnail( 'medium', array(
 	                                	'class' => 'content-image img-fluid d-block mx-auto' )); ?>
                                     <div class="content-details fadeIn-bottom">
-	    							    <h3 class="content-title"><?php the_title(); ?></h3>
+	    							    <h4 class="content-title"><?php the_title(); ?></h4>
 	    						    </div>
 	    					    </a>
 	    				    </div>
 	    			    </div>
 	    			<?php 
 	    		    endforeach; 
-	    		wp_reset_postdata();
-	    		?> 
+	    		    wp_reset_postdata();
+	    		    ?> 
+	    	        </div>
 	    	    </div>
 	        </div>
 	        <div class="container-fluid" style="background-color:Black"><br><br><br><br></div>
 	    </section>
 	    <?php  
-	    //get_template_part( 'page', 'packages' );
+	    
 	    get_template_part( 'page', 'blog' );
 	    get_template_part( 'page', 'make-pack' );
 	    get_template_part( 'page', 'contact' );
