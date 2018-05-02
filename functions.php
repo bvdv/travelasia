@@ -230,11 +230,23 @@ function create_post_type() {
 	register_post_type( 'packages',
 		array(
 			'labels' => array(
-				'name' => __( 'Package' ),
-				'singular_name' => __( 'Packages' )
+				'name' => __( 'Packages' ),
+				'singular_name' => __( 'Package' )
 			),
 			'public' => true,
 			'supports' => array('title', 'editor',  'trackbacks',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
+
+	register_post_type( 'blog',
+		array(
+			'labels' => array(
+				'name' => __( 'Blog-posts' ),
+				'singular_name' => __( 'Blog-post' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks', 'author',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
 			'has_archive' => true,
 		)
 	);

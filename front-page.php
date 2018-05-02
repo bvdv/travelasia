@@ -22,6 +22,7 @@ get_header();
 		get_template_part( 'page', 'booking' );
 		
 		?>
+		<!-- Start feature Area -->
 		<section class="feature-area section-gap">
 			<div class="container">
 				<div class="row">
@@ -38,13 +39,16 @@ get_header();
 							<a href="<?php echo get_post_type_archive_link('features'); ?>" class="text-uppercase primary-btn2 primary-border circle">View Details</span></a>
 						</div>
 						<?php 
-					endforeach; 
+					    endforeach; 
 					wp_reset_postdata();
 					?> 
-				</div>
-			</div>
-		</div>
+				    </div>
+			    </div>
+		    </div>
 	    </section>
+        <!-- End feature Area --> 
+
+        <!-- Start packages Area --> 
 	    <section class="packages-area" id="package">
 	    	<div class="container-fluid">
 	    		<div class="row d-flex justify-content-center">
@@ -64,7 +68,7 @@ get_header();
 	    				    <div class="content">
 	    					    <a href="<?php echo get_post_type_archive_link('packages'); ?>"> 
 	    						    <div class="content-overlay"></div>
-	                                <?php travelasia_post_thumbnail( 'medium', array(
+	                                <?php the_post_thumbnail( 'medium', array(
 	                                	'class' => 'content-image img-fluid d-block mx-auto' )); ?>
                                     <div class="content-details fadeIn-bottom">
 	    							    <h4 class="content-title"><?php the_title(); ?></h4>
@@ -81,9 +85,54 @@ get_header();
 	        </div>
 	        <div class="container-fluid" style="background-color:Black"><br><br><br><br></div>
 	    </section>
+        <!-- End packages Area -->
+
+        <!-- Start blog Area -->
+        <section class="blog-area" id="blog">
+        	<div class="container">
+        		<div class="row justify-content-center">
+        			<div class="col-md-8 pb-30 header-text">
+        				<h1>Our Recent Blogs</h1>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<?php 
+        			global $post;
+        			$args = array( 'numberposts' => 3 ,'post_type' => 'Blog', 'suppress_filters' => true );
+        			$lastposts = get_posts( $args ); 
+        				foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+        				    <div class="single-blog col-lg-4 col-md-4">
+        					    <a href="<?php echo get_post_type_archive_link('blog'); ?>">
+        						    <?php the_post_thumbnail( 'medium', array(
+        							'class' => 'f-img img-fluid mx-auto' )); ?>
+        						</a>
+        						<h4>
+        							<a href="<?php echo get_post_type_archive_link('blog'); ?>"><?php the_title(); ?></a>
+        						</h4>
+        						<p>
+        							<?php  the_excerpt(); ?>
+        						</p>
+        						<div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+        							<div>
+        								<a href="#"><span><?php echo get_the_author(); ?></span></a>
+        							</div>
+        							<div class="meta">
+        								<?php echo get_the_date(); ?>
+        								<span class="lnr lnr-bubble"></span> <?php comments_number( 'No Comments', '01', '%' ); ?>
+        							</div>
+        						</div>
+        					</div>
+        					<?php 
+        				endforeach; 
+        			wp_reset_postdata();?> 
+        		</div>	
+        	</div>	
+        </section>	
+        <!-- End blog Area -->
+
 	    <?php  
 	    
-	    get_template_part( 'page', 'blog' );
+	    
 	    get_template_part( 'page', 'make-pack' );
 	    get_template_part( 'page', 'contact' );
 
