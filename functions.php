@@ -200,6 +200,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ *  Excerpt length
+ */
 function admoneo_travel_excerpt_length( $length ) {
 	return 15;
 }
@@ -207,31 +211,27 @@ add_filter( 'excerpt_length', 'admoneo_travel_excerpt_length', 999 );
 
 
 /**
- *  Display all Feature category posts
+ *  Custom posts type 
  */
-function category_feature_posts() {
-
-}
-
 function create_post_type() {
-
-
-	register_post_type( 'acme_product',
-		array(
-			'labels' => array(
-				'name' => __( 'Products' ),
-				'singular_name' => __( 'Product' )
-			),
-			'public' => true,
-			'has_archive' => true,
-		)
-	);
 
 	register_post_type( 'features',
 		array(
 			'labels' => array(
 				'name' => __( 'Features' ),
 				'singular_name' => __( 'Feature' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
+
+	register_post_type( 'packages',
+		array(
+			'labels' => array(
+				'name' => __( 'Package' ),
+				'singular_name' => __( 'Packages' )
 			),
 			'public' => true,
 			'supports' => array('title', 'editor',  'trackbacks',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
