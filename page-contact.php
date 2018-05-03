@@ -40,8 +40,9 @@
 	<div class="container-fluid">
 		<div class="row align-items-center d-flex justify-content-start">
 			<div class="col-lg-6 col-md-12 contact-left no-padding">
-					<div style=" width:100%;
-        height: 545px;" id="map"></div>
+				<!-- WP Google Map plugin by SRMILON, 
+                Recommendation: width:100%, height: 545px -->
+				<?php echo do_shortcode( '[gmap-embed id="170"]' ); ?>
 			</div>
 			<div class="col-lg-4 col-md-12 pt-100 pb-100">
 				<form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
