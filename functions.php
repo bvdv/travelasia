@@ -141,6 +141,11 @@ function travelasia_scripts() {
 
     wp_enqueue_style( 'main-css', get_template_directory_uri() . '/css/main.css', array(), '2017' );
 
+    
+    if (is_front_page()){
+    	wp_enqueue_script( 'skyscanner_widget', 'https://widgets.skyscanner.net/widget-server/js/loader.js', array(), '20180315', true);
+    }
+
 
     wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/vendor/jquery-2.2.4.min.js', array(), '20151215', true );
 
