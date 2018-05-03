@@ -20,6 +20,30 @@ get_header();
 
 		<!-- start banner Area -->
 		<section class="banner-area relative" id="home" style="background:url(<?php echo get_header_image();?>)">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
+					
+						<?php 
+						global $post;
+						$args = array( 'numberposts' => 1 ,'post_type' => 'banner', 'suppress_filters' => true );
+						$lastposts = get_posts( $args ); 
+						foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+                        <div class="banner-content col-lg-9 col-md-12">	
+						<h1><?php the_title(); ?></h1>
+						<?php the_content(); ?>
+						<a href="<?php echo get_post_type_archive_link('blog'); ?>" class="primary-btn">See Details<span class="lnr lnr-arrow-right"></span></a>
+				         </div>   
+
+						<?php 
+					endforeach; 
+					wp_reset_postdata(); ?>
+					   
+			</div> 
+		</div> 
+	</section>
+
+<!-- 		<section class="banner-area relative" id="home" style="background:url(<?php echo get_header_image();?>)">
             <div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
@@ -33,7 +57,9 @@ get_header();
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
+        
+
 		<!-- End banner Area -->
         
         <!-- Start booking Area -->
