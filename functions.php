@@ -263,6 +263,18 @@ function create_post_type() {
 		)
 	);
 
+	register_post_type( 'make-pack',
+		array(
+			'labels' => array(
+				'name' => __( 'Make-package' ),
+				'singular_name' => __( 'Make-package' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks', 'author',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
+
 }
 add_action( 'init', 'create_post_type' );
 

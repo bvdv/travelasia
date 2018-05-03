@@ -157,14 +157,85 @@ get_header();
         </section>	
         <!-- End blog Area -->
 
-	    <?php  
-	    
-	    
-	    get_template_part( 'page', 'make-pack' );
+	    <!-- Start about Area -->
+	    <section class="about-area">
+	    	<div class="container-fluid">
+	    		<div class="row d-flex justify-content-end align-items-center">
+	    			<?php 
+	    			global $post;
+	    			$args = array( 'numberposts' => 1 ,'post_type' => 'make-pack', 'suppress_filters' => true );
+	    			$lastposts = get_posts( $args ); 
+	    			foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+	    			<div class="col-lg-6 col-md-12 about-left">	
+	    				<?php the_content(); 
+	    				the_excerpt();
+	    				?>
+	    				<button class="btn btn-black" data-toggle="modal" data-target="#packModal">Make Package of your own</button>
+	    				<!-- The Modal -->
+	    				<div class="modal fade" id="packModal">
+	    					<div class="modal-dialog modal-dialog-centered">
+	    						<div class="modal-content">
+	    							<!-- Modal Header -->
+	    							<div class="modal-header">
+	    								<h4 class="modal-title">Ask for custom package</h4>
+	    								<button type="button" class="close" data-dismiss="modal">&times;</button>
+	    							</div>
+	    							<!-- Modal body -->
+	    							<div class="modal-body">
+	    								<!-- Default form contact -->
+	    								<form>
+	    									<!-- <p class="h4 text-center mb-4">Write to us</p> -->
+	    									<!-- Default input name -->
+	    									<label for="defaultFormContactNameEx" class="grey-text">Your name</label>
+	    									<input type="text" id="defaultFormContactNameEx" class="form-control">
+                                            <br>
+	    									<!-- Default input email -->
+	    									<label for="defaultFormContactEmailEx" class="grey-text">Your email</label>
+	    									<input type="email" id="defaultFormContactEmailEx" class="form-control">
+                                            <br>
+                                            <!-- Default input subject -->
+	    									<label for="defaultFormContactSubjectEx" class="grey-text">Subject</label>
+	    									<input type="text" id="defaultFormContactSubjectEx" class="form-control">
+	    									<br>
+	    									<!-- Default textarea message -->
+	    									<label for="defaultFormContactMessageEx" class="grey-text">Your message</label>
+	    									<textarea type="text" id="defaultFormContactMessageEx" class="form-control" rows="3"></textarea>
+	    									<div class="text-center mt-4">
+	    										<button class="btn btn-outline-warning" type="submit">Send<i class="fa fa-paper-plane-o ml-2"></i></button>
+	    									</div>
+	    								</form>
+	    								<!-- Default form contact -->
+	    							</div>
+                                    <!-- Modal footer -->
+	    							<div class="modal-footer">
+	    								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	    							</div>
+                                </div>
+		    					</div>
+		    				</div>
+		    			</div>   
+		    			<?php 
+		    		endforeach; 
+		    		wp_reset_postdata(); ?>
+		    		<div class="col-lg-6 col-md-12 about-right no-padding">
+		    			<?php the_post_thumbnail( 'full', array('class' => 'img-fluid' )); ?>
+		    		</div>
+		    	</div> 
+		    </div>
+		</section>     
+        <!-- End about Area -->
+
+        <!-- Start Contact Area -->
+        <?php
+
+
+
 	    get_template_part( 'page', 'contact' );
 
 
-	?>
+	    ?>
+        <!-- End Contact Area -->
+
 
 </main><!-- #main -->
 </div><!-- #primary -->

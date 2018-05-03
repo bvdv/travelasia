@@ -1,4 +1,4 @@
-<section class="contact-area" id="contact">
+<section class="contact-area" id="contact" style="padding-top: 120px;">
 	<div class="container">
 		<div class="contact-info-area">
 			<div class="row">
