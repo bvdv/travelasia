@@ -10,7 +10,7 @@ The project was made using: Sublime Text 3, underscores.me starter theme and Wor
 ###Task:
 
 ###Header area: 
-Custom menu, menu can be changed from the admin panel.
+<p>Custom menu, menu can be changed from the admin panel.</p>
 ###Banner area: 
 Banner image, banner slogan can be changed from the admin panel.
 ###Booking area:
