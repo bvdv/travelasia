@@ -15,5 +15,5 @@
 <br><strong>Popular packages area:</strong> Displayed 6 post with thumbnail image and post title, displayed as carousel. Adding post and thumbnail image from admin panel.
 <br><strong>Blog area:</strong> Displayed 3 recent post with author, data and comment count. Adding post and thumbnail image from admin panel.
 <br><strong>Custom package area:</strong> Made modal window with email form…… Adding post and thumbnail image from admin panel.
-<br><strong>Contact area:</strong> Map made with WP Google map plugins,
+<br><strong>Contact area:</strong> Displayed 4 contact/address post. can be changed from the admin panel. Map made with WP Google map plugins.
 <br><strong>Footer area:</strong>

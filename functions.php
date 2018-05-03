@@ -275,6 +275,18 @@ function create_post_type() {
 		)
 	);
 
+	register_post_type( 'contacts',
+		array(
+			'labels' => array(
+				'name' => __( 'Contacts' ),
+				'singular_name' => __( 'Contact' )
+			),
+			'public' => true,
+			'supports' => array('title', 'editor',  'trackbacks', 'author',  'page-attributes', 'post-formats', 'thumbnail', 'excerpt', 'custom-fields'),
+			'has_archive' => true,
+		)
+	);
+
 }
 add_action( 'init', 'create_post_type' );
 

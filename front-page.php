@@ -226,51 +226,32 @@ get_header();
         <!-- End about Area -->
 
         <!-- Start Contact Area -->
-		<section class="contact-area" id="contact" style="padding-top: 120px;">
-			<div class="container">
-				<div class="contact-info-area">
-					<div class="row">
-						<div class="single-info col-lg-3 col-md-6">
-							<h4>Visit Our Office</h4>
-							<p>
-								56/8, bir uttam qazi nuruzzaman
-								road, west panthapath, kalabagan,
-								Dhanmondi, Dhaka - 1205
-							</p>
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							<h4>Let’s call us</h4>
-							<p>
-								Phone 01: 012-6532-568-9746 <br>
-								Phone 02: 012-6532-568-9748 <br>
-								FAX: 02-6532-568-746
-							</p>
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							<h4>Let’s Email Us</h4>
-							<p>
-								hello@colorlib.com <br>
-								mainhelpinfo@colorlib.com <br>
-								infohelp@colorlib.com
-							</p>
-						</div>
-						<div class="single-info col-lg-3 col-md-6">
-							<h4>Customer Support</h4>
-							<p>
-								support@colorlib.com <br>
-								emergencysupp@colorlib.com <br>
-								extremesupp@colorlib.com
-							</p>
-						</div>
-					</div>
+        <section class="contact-area" id="contact" style="padding-top: 120px;">
+        	<div class="container">
+        		<div class="contact-info-area">
+        			<div class="row">
+				        <?php 
+				        global $post;
+				        $args = array('numberposts' => 4 ,'post_type' => 'Contacts', 'suppress_filters' => true );
+				        $lastposts = get_posts( $args ); 
+				            foreach ( $lastposts as $post ) : setup_postdata( $post ); ?>
+				                <div class="single-info col-lg-3 col-md-6">
+				        	        <h4><?php the_title(); ?></h4>
+				        	        <?php the_content(); ?>
+				        	    </div>
+				        <?php 
+				            endforeach; 
+				        wp_reset_postdata();
+				        ?>
+                    </div>
 				</div>
 			</div>
 			<div class="container-fluid">
 				<div class="row align-items-center d-flex justify-content-start">
 					<div class="col-lg-6 col-md-12 contact-left no-padding">
 						<!-- WP Google Map plugin by SRMILON, 
-		                Recommendation: width:100%, height: 545px -->
-						<?php echo do_shortcode( '[gmap-embed id="170"]' ); ?>
+		                Recommendation: width:100%, height: 545px 
+						<?php echo do_shortcode( '[gmap-embed id="170"]' ); ?>--> 
 					</div>
 					<div class="col-lg-4 col-md-12 pt-100 pb-100">
 						<form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
