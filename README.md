@@ -1,5 +1,4 @@
 # travelasia
-Wordpress website
 
 Wordpress theme for website about travel across Asia, based on HTML/JS/CSS template from Colorlib.
 
@@ -7,6 +6,7 @@ My job was to convert this template to Wordpress theme.
 
 The project was made using: Sublime Text 3, underscores.me starter theme and Wordpress 4.9.5.
 <h3>Task:</h3>
+<<<<<<< HEAD
 <strong>Header area:</strong> Custom menu, menu can be changed from the admin panel.
 <strong>Banner area:</strong> Banner image and banner slogan can be changed from the admin panel.
 <strong>Booking area:</strong>
