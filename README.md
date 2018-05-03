@@ -8,8 +8,8 @@ The project was made using: Sublime Text 3, underscores.me starter theme and Wor
 
 <h3>Task:</h3>
 
-<h4>Header area:</h4><p>Custom menu, menu can be changed from the admin panel.</p>
-<h4>Banner area:</h4><p>Banner image, banner slogan can be changed from the admin panel.</p>
+<h4>Header area:</h4>Custom menu, menu can be changed from the admin panel.
+<h4>Banner area:</h4>Banner image, banner slogan can be changed from the admin panel.
 <h4>Booking area:</h4>
 <h4>Features area:</h4><p>4 post, work as carousel, adding posts from admin panel.</p>
 <h4>Popular packages area:</h4><p>6 post with thumbnail image and post title, works as carousel. Adding post and thumbnail image from admin panel.</p>
