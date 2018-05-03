@@ -1,4 +1,4 @@
-# travelasia
+# Travel Asia
 <p>Wordpress theme for website about travel across Asia, based on HTML/JS/CSS template from Colorlib.</p>
 
 <p>My job was to convert this template to Wordpress theme.</p>
@@ -7,8 +7,8 @@
 
 <p>For areas with posts was registered post type with archive page for future customization. All scripts and styles registered in functions.php. </p> 
 
-<h4>Task:</h4>
-<strong>Header area:</strong> Custom menu, menu can be changed from the admin panel.
+<strong>Task:</strong>
+<br><strong>Header area:</strong> Custom menu, menu can be changed from the admin panel.
 <br><strong>Banner area:</strong> Banner image and banner slogan can be changed from the admin panel.
 <br><strong>Booking area:</strong>
 <br><strong>Features area:</strong> Displayed as 4 post carousel, adding posts from admin panel.
