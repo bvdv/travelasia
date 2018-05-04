@@ -8,7 +8,7 @@
 <p>For areas with posts was registered post type with archive page for future customization. All scripts and styles registered in functions.php. </p> 
 
 <strong>Completed tasks:</strong>
-<br><strong>Header area:</strong> Custom menu, menu can be changed from the admin panel.
+<br><strong>Header area:</strong> Header.php. Custom menu, menu, Logo image can be changed from the admin panel.
 <br><strong>Banner area:</strong> Banner image and banner slogan can be changed from the admin panel.
 <br><strong>Booking area:</strong> Flights booking made with Skyscanner Widget, Hotels booking is planned to be done with other Travelpayouts
 <br><strong>Features area:</strong> Displayed as 4 post carousel, adding posts from admin panel.
@@ -16,4 +16,6 @@
 <br><strong>Blog area:</strong> Displayed 3 recent post with author, data and comment count. Adding post and thumbnail image from admin panel.
 <br><strong>Custom package area:</strong> Made modal window with email form…… Adding post and thumbnail image from admin panel.
 <br><strong>Contact area:</strong> Displayed 4 contact/address post, can be changed from the admin panel. Map made with WP Google map plugins.
-<br><strong>Footer area:</strong>
+<br><strong>Footer area:</strong> Footer.php
+
+

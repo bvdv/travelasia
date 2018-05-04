@@ -184,8 +184,8 @@
               });      
       // -------   Mail Send ajax
 
+    if($('body').is('.home')){
 
-      
       $('.features-carousel').owlCarousel({
         dots: false,
         items: 4,
@@ -245,7 +245,7 @@
         }
 
       });
-
+    }
 
     });
 
