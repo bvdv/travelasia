@@ -15,7 +15,9 @@
 <br><strong>Popular packages area:</strong> Displayed 6 post with thumbnail image and post title, displayed as carousel. Adding post and thumbnail image from admin panel.
 <br><strong>Blog area:</strong> Displayed 3 recent post with author, data and comment count. Adding post and thumbnail image from admin panel.
 <br><strong>Custom package area:</strong> Made modal window with email form…… Adding post and thumbnail image from admin panel.
-<br><strong>Contact area:</strong> Displayed 4 contact/address post, can be changed from the admin panel. Map made with WP Google map plugins.
-<br><strong>Footer area:</strong> Footer.php
+<br><strong>Contact area:</strong> Displayed 4 contact/address post, can be changed from the admin panel. Map made with WP Google map plugins. Send message with Contact Form plugin
+<br><strong>Footer area:</strong> Footer.php. Newsletter with Contact Form.
+
+All underscores.me starter theme files are left for future website customization.
 
 
